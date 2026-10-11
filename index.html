@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBA Emulator - JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="emulator-container">
+        <div class="game-panel">
+            <header>
+                <h1>GBA Emulator</h1>
+                <div class="status-bar">
+                    <span id="cpu-status">Idle</span> | 
+                    <span id="fps-counter">0 FPS</span>
+                </div>
+            </header>
+            
+            <div id="game-viewport-container">
+                <canvas id="game-canvas" width="240" height="160"></canvas>
+            </div>
+            
+            <div class="controls-panel">
+                <div class="file-input-wrapper">
+                    <label for="rom-upload" class="custom-file-upload">
+                        Load ROM (.gba)
+                    </label>
+                    <input id="rom-upload" type="file" accept=".gba,.gb" />
+                </div>
+                
+                <div class="playback-controls">
+                    <button id="start-btn" disabled>Start</button>
+                    <button id="pause-btn" disabled>Pause</button>
+                    <button id="reset-btn" disabled>Reset</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Controls</h3>
+                <ul class="key-mappings">
+                    <li><span>Arrows</span>: D-Pad</li>
+                    <li><span>Z / X</span>: A / B</li>
+                    <li><span>Enter</span>: Start</li>
+                    <li><span>Shift</span>: Select</li>
+                    <li><span>Q / E</span>: L / R</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="emulator.js"></script>
+</body>
+</html>
